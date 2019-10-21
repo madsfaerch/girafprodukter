@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import classnames from "classnames";
 
-const Navbar: React.FC = props => {
+const Navbar: React.FC = () => {
   const [isActive, setIsActive] = useState(false);
   const activeClass = { "is-active": isActive };
   const navbarBurgerClasses = classnames("navbar-burger burger", activeClass)
@@ -23,7 +23,7 @@ const Navbar: React.FC = props => {
           <div
             className={navbarBurgerClasses}
             data-target="navMenu"
-            onClick={() => this.toggleHamburger()}
+            onClick={() => toggleHamburger()}
           >
             <span />
             <span />
@@ -35,8 +35,8 @@ const Navbar: React.FC = props => {
           className={navbarMenuClasses}
         >
           <div className="navbar-start has-text-centered">
-            <Link className="navbar-item" to="/about">
-              About
+            <Link className="navbar-item" to="/">
+              Forside
               </Link>
             <Link className="navbar-item" to="/products">
               Products
