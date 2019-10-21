@@ -7,6 +7,7 @@
     "@types/react": "^16.9.9",
     "@types/react-dom": "^16.9.2",
     "bulma": "^0.8.0",
+    "classnames": "^2.2.6",
     "gatsby": "^2.13.31",
     "gatsby-image": "^2.0.23",
     "gatsby-plugin-netlify": "^2.0.6",
