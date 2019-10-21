@@ -39,10 +39,10 @@ const Navbar: React.FC = () => {
               Forside
               </Link>
             <Link className="navbar-item" to="/products">
-              Products
+              Produkter
               </Link>
             <Link className="navbar-item" to="/contact">
-              Contact
+              Kontakter
               </Link>
           </div>
         </div>
