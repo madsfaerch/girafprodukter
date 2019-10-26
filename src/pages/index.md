@@ -4,22 +4,10 @@ title: Girafprodukter
 heading: '-'
 subheading: '-'
 description: |-
-  Dækkeservietter
-
-
-
-  Plakater
-
-
-
-  Spil
-
-
-
-  Bøger 
-
-
-
-  Postkort
+  * Dækkeservietter 
+  * Plakater 
+  * Spil 
+  * Bøger 
+  * Postkort
 ---
 
