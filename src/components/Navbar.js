@@ -1,55 +1,31 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'gatsby'
-import classnames from "classnames";
+import useSiteMetadata from './SiteMetadata';
 
-const Navbar = React.forwardRef((_props, ref) => {
-  const [isActive, setIsActive] = useState(false);
-  const activeClass = { "is-active": isActive };
-  const navbarBurgerClasses = classnames("navbar-burger burger", activeClass)
-  const navbarMenuClasses = classnames("navbar-menu", activeClass)
+const colorClasses = [
+  "red", "blue", "green", "yellow", "purple"
+]
 
-  const toggleHamburger = () => {
-    setIsActive(!isActive)
-  }
+const Navbar = () => {
+  const { title } = useSiteMetadata();
 
   return (
     <nav
       className="navbar is-transparent"
       role="navigation"
       aria-label="main-navigation"
-      ref={ref}
     >
       <div className="container">
-        <div className="navbar-brand">
-          <div
-            className={navbarBurgerClasses}
-            data-target="navMenu"
-            onClick={() => toggleHamburger()}
-          >
-            <span />
-            <span />
-            <span />
-          </div>
-        </div>
-        <div
-          id="navMenu"
-          className={navbarMenuClasses}
-        >
-          <div className="navbar-start has-text-centered">
-            <Link className="navbar-item" to="/">
-              Forside
-              </Link>
-            <Link className="navbar-item" to="/products">
-              Produkter
-              </Link>
-            <Link className="navbar-item" to="/contact">
-              Kontakter
-              </Link>
-          </div>
-        </div>
+        {/* <div className="navbar-brand"> */}
+        <h3 className="nav__header">
+          {title.split("").map((ch, i) => {
+            return (<span key={i} className={colorClasses[i % colorClasses.length]}>{ch}</span>)
+          })}
+        </h3>
+        {/* </div> */}
       </div>
     </nav>
   )
-})
+}
 
 export default Navbar
