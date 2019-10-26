@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-title: Girafprodukter ;ljlk;j;lkj;lj;j;lj
+title: Girafprodukter
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
 description: >-
