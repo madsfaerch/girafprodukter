@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import classnames from "classnames";
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
   const activeClass = { "is-active": isActive };
   const navbarBurgerClasses = classnames("navbar-burger burger", activeClass)
