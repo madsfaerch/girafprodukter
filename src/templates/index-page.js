@@ -4,6 +4,10 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 
+const colorClasses = [
+  "red", "blue", "green", "yellow", "purple"
+]
+
 export const IndexPageTemplate = ({
   title,
   heading,
@@ -20,7 +24,9 @@ export const IndexPageTemplate = ({
               padding: '0.25em 0',
             }}
           >
-            {title}
+            {title.split("").map((ch, i, arr) => {
+              return (<span key={i} className={colorClasses[i % colorClasses.length]}>{ch}</span>)
+            })}
           </h1>
           <h3
             className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
