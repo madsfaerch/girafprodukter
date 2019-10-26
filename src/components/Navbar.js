@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import classnames from "classnames";
 
-const Navbar = () => {
+const Navbar = React.forwardRef((_props, ref) => {
   const [isActive, setIsActive] = useState(false);
   const activeClass = { "is-active": isActive };
   const navbarBurgerClasses = classnames("navbar-burger burger", activeClass)
@@ -17,6 +17,7 @@ const Navbar = () => {
       className="navbar is-transparent"
       role="navigation"
       aria-label="main-navigation"
+      ref={ref}
     >
       <div className="container">
         <div className="navbar-brand">
@@ -49,6 +50,6 @@ const Navbar = () => {
       </div>
     </nav>
   )
-}
+})
 
 export default Navbar
